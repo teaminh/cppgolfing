@@ -10,25 +10,26 @@ int main() {
         cout << "DUNG\n";
         return 0;
     }
-    int ngoacTrai { 0 };
+    int demNgoacTrai{};
+    unsigned int ngoacTrai{};
+    unsigned int ngoacPhai{};
     const size_t length = s.length();
     for (size_t i = 0; i < length; i++) {
         char charAtI = s[i];
         if (charAtI == '(') {
+            demNgoacTrai++;
             ngoacTrai++;
         } else if (charAtI == ')') {
+            ngoacPhai++;
             if (ngoacTrai > 0) {
-                ngoacTrai--;
-            } else {
-                cout << "KHONG DUNG\n";
-                return 0;
+                demNgoacTrai--;
             }
         } else {
             cout << "KHONG HOP LE\n";
             return 0;
         }
     }
-    if (ngoacTrai == 0) cout << "DUNG\n";
-    else cout << "KHONG DUNG\n";
+    if (ngoacTrai != ngoacPhai) cout << "KHONG DUNG\n";
+    else cout << (demNgoacTrai == 0 ? "DUNG\n" : "KHONG DUNG\n");
     return 0;
 }
