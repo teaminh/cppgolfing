@@ -6,8 +6,8 @@ using namespace std;
 
 int main() {
     string s;
-    constexpr char INPUTFILE[] = "NGOAC.inp";
-    constexpr char OUTPUTFILE[] = "NGOAC.out";
+    constexpr char INPUTFILE[] = "NGOAC.INP";
+    constexpr char OUTPUTFILE[] = "NGOAC.OUT";
     ifstream input(INPUTFILE, ios::in);
     if (!input.is_open()) {
         cout << "\n";
