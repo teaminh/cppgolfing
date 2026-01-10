@@ -11,7 +11,7 @@ int main() {
     int n;
     ifstream input(INPUTFILE, ios::in);
     if (!input.is_open()) {
-        cerr << "input error";
+        cerr << "input error\n";
         return 1;
     }
     input >> n;
@@ -19,6 +19,10 @@ int main() {
     getline(input, s);
     input.close();
     ofstream output(OUTPUTFILE, ios::out);
+    if (!output.is_open()) {
+        cerr << "output error\n";
+        return 1;
+    }
     if (s.empty()) {
         output << "0\n";
         output.close();
