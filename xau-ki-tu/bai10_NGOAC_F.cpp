@@ -1,6 +1,6 @@
-#include <fstream>
 #include <iostream>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -10,14 +10,14 @@ int main() {
     constexpr char OUTPUTFILE[] = "NGOAC.OUT";
     ifstream input(INPUTFILE, ios::in);
     if (!input.is_open()) {
-        cout << "\n";
+        cerr << "input error\n";
         return 1;
     }
     getline(input, s);
     input.close();
-    ofstream output(OUTPUTFILE, ios::out | ios::trunc);
+    ofstream output(OUTPUTFILE, ios::out);
     if (!output.is_open()) {
-        cout << "\n";
+        cerr << "output error\n";
         return 1;
     }
     if (s.empty()) {
