@@ -20,15 +20,15 @@ int main() {
             if (ngoacTrai > 0) {
                 ngoacTrai--;
             } else {
-                cout << "KHONG DUNG";
+                cout << "KHONG DUNG\n";
                 return 0;
             }
         } else {
-            cout << "KHONG HOP LE";
+            cout << "KHONG HOP LE\n";
             return 0;
         }
     }
-    if (ngoacTrai == 0) cout << "DUNG";
-    else cout << "KHONG DUNG";
+    if (ngoacTrai == 0) cout << "DUNG\n";
+    else cout << "KHONG DUNG\n";
     return 0;
 }
