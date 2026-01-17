@@ -5,10 +5,8 @@
 using namespace std;
 
 int main() {
-    const string inputFile = "GROCERY.INP";
-    const string outputFile = "GROCERY.OUT";
-    ifstream finput(inputFile, ios::in);
-    ofstream foutput(outputFile, ios::out | ios::trunc);
+    ifstream finput("GROCERY.INP", ios::in);
+    ofstream foutput("GROCERY.OUT", ios::out | ios::trunc);
     if (!finput.is_open()) {
         cerr << "input error";
         return 1;
