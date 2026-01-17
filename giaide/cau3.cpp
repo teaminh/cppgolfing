@@ -7,10 +7,8 @@ using namespace std;
 bool passwordTest(const string& s);
 
 int main() {
-    const string inputFile = "PASSWORD.INP";
-    const string outputFile = "PASSWORD.OUT";
-    ifstream finput(inputFile, ios::in);
-    ofstream foutput(outputFile, ios::out | ios::trunc);
+    ifstream finput("PASSWORD.INP", ios::in);
+    ofstream foutput("PASSWORD.OUT", ios::out | ios::trunc);
     if (!finput.is_open()) {
         cerr << "input error";
         return 1;
